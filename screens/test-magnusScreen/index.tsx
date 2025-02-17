@@ -10,14 +10,9 @@ import { View } from "react-native";
 
 export default function TestUnistyles3Screen() {
 
-
-    const insets = useSafeAreaInsets();
-
-    const theme = UnistylesRuntime.getTheme("blueTheme");
-
     return <Div style={styles.container}>
 
-        <Text style={{color: theme.colors.textColor}}>Unistyles3 Test Screen</Text>
+        <Text style={styles.text}>Unistyles3 Test Screen</Text>
         <Button alignSelf="center" onPress={() => {
             UnistylesRuntime.setTheme(
                 UnistylesRuntime.themeName === "blueTheme"
@@ -25,7 +20,7 @@ export default function TestUnistyles3Screen() {
                   : "blueTheme"
               )
         }}>
-            <Text style={{color: theme.colors.textColor}}>changeTheme</Text>
+            <Text style={styles.text}>changeTheme</Text>
         </Button>
 
     </Div>;
@@ -38,5 +33,8 @@ const styles = StyleSheet.create((theme, rt) => ({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: theme.colors.mainColor,
+    },
+    text: {
+        color: theme.colors.textColor,
     }
 }))

@@ -4,7 +4,7 @@ import { ThemeProvider } from "react-native-magnus";
 import TestEntryScreen from "~/screens/test-entryScreen";
 import TestMagnusScreen from "~/screens/test-magnusScreen";
 import TestViewScreen from "~/screens/test-viewScreen";
-
+import TestMagnusScreenWithHooks from "~/screens/test-magnusScreenWithHooks";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +22,7 @@ export const AppNavigator = () => {
                         <Stack.Screen name="TestEntryScreen" component={TestEntryScreen} />
                         <Stack.Screen name="TestMagnusScreen" component={TestMagnusScreen} />
                         <Stack.Screen name="TestViewScreen" component={TestViewScreen} />
+                        <Stack.Screen name="TestMagnusScreenWithHooks" component={TestMagnusScreenWithHooks} />
                     </Stack.Group>
                 </Stack.Navigator>
             </NavigationContainer>

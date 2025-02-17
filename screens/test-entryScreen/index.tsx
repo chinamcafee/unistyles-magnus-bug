@@ -9,6 +9,7 @@ import { Button, Div, ScrollDiv, Text } from "react-native-magnus";
 type RootStackParamList = {
     TestMagnusScreen: undefined;
     TestViewScreen: undefined;
+    TestMagnusScreenWithHooks: undefined;
 };
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
@@ -31,6 +32,14 @@ export default function TestEntryScreen() {
                     Magnus Div Test
                 </Button>
 
+                <Button
+                    onPress={() => {
+                        navigation.navigate("TestMagnusScreenWithHooks");
+                    }}
+                    mt={5}
+                >
+                    Magnus Div Test with Hooks
+                </Button>
                 <Button
                     onPress={() => {
                         navigation.navigate("TestViewScreen");
