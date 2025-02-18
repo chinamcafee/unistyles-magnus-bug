@@ -4,7 +4,10 @@ module.exports = function (api) {
     presets: ["babel-preset-expo"],
     plugins: [
       // other plugins
-      ["react-native-unistyles/plugin"],
+      // ["react-native-unistyles/plugin",{
+      //   autoProcessImports: ['react-native-magnus']
+      // }],
+      ["react-native-reanimated/plugin"],
     ],
   };
 };

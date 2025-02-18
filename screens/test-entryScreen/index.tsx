@@ -10,6 +10,8 @@ type RootStackParamList = {
     TestMagnusScreen: undefined;
     TestViewScreen: undefined;
     TestMagnusScreenWithHooks: undefined;
+    TestMagnusScreenWithUnistyles: undefined;
+    TestHoldMenuScreen: undefined;
 };
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList>;
@@ -21,10 +23,18 @@ export default function TestEntryScreen() {
     return <Div flex={1} justifyContent="center" alignItems="center" pt={insets.top}>
 
         <Div flex={1} justifyContent="flex-start" alignItems="center" mt={10}>
-            <Text fontSize={20} fontWeight="bold">【Two Test Screen】</Text>
+            <Text fontSize={20} fontWeight="bold">【Menu Broken Test】</Text>
             <ScrollDiv flex={1} w={"100%"}>
 
                 <Button
+                    onPress={() => {
+                        navigation.navigate("TestHoldMenuScreen");
+                    }}
+                    mt={5}
+                >
+                    Menu Test
+                </Button>
+                {/* <Button
                     onPress={() => {
                         navigation.navigate("TestMagnusScreen");
                     }}
@@ -40,6 +50,16 @@ export default function TestEntryScreen() {
                 >
                     Magnus Div Test with Hooks
                 </Button>
+
+                <Button
+                    onPress={() => {
+                        navigation.navigate("TestMagnusScreenWithUnistyles");
+                    }}
+                    mt={5}
+                >
+                    TestMagnusScreenWithUnistyles Test
+                </Button>
+
                 <Button
                     onPress={() => {
                         navigation.navigate("TestViewScreen");
@@ -47,7 +67,8 @@ export default function TestEntryScreen() {
                     mt={5}
                 >
                     View Component Test
-                </Button>
+                </Button> */}
+
             </ScrollDiv>
         </Div>
 
